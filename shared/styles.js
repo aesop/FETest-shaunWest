@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { keyframes, css, Global } from '@emotion/core'
 import styled from '@emotion/styled'
 

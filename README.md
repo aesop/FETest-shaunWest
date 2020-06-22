@@ -1,3 +1,7 @@
+## AESOP Test
+
+Next.js App, boilerplated from *with-emotion* template.
+
 # Pass Server Data Directly to a Next.js Page during SSR
 
 Extract and inline critical css with
