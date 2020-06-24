@@ -9,10 +9,10 @@ export const globalStyles = (
       body {
         padding: 3rem 1rem;
         margin: 0;
-        background: papayawhip;
+        background: #f1f4f7;
         min-height: 100%;
         font-family: Helvetica, Arial, sans-serif;
-        font-size: 24px;
+        font-size: 16px;
       }
     `}
   />
