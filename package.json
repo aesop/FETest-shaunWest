@@ -7,14 +7,15 @@
     "coverage": "jest --watchAll --coverage -u",
     "test": "jest --watch -u",
     "lint": "eslint './**/*.js' --fix",
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server.js"
   },
   "jest": {
     "automock": false,
     "collectCoverageFrom": [
       "./**/*.js",
+      "!**/coverage/**",
       "!**/node_modules/**"
     ],
     "setupFiles": [
@@ -28,9 +29,12 @@
     "@emotion/styled": "10.0.27",
     "emotion": "10.0.27",
     "emotion-server": "10.0.27",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^1.0.4",
     "next": "9.4.4",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-transition-group": "^4.4.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.9.0",
