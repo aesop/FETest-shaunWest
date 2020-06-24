@@ -9,9 +9,9 @@ describe('Accordion Component', () => {
 
     const { getByTestId } = render(
       <Accordion initialActiveId="MockId">
-        <Accordion.Panel header={title} id="MockId">
+        <div header={title} id="MockId">
           <div>{panel}</div>
-        </Accordion.Panel>
+        </div>
       </Accordion>
     )
 

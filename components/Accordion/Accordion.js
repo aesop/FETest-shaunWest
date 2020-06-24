@@ -36,7 +36,11 @@ const Accordion = ({
 Accordion.propTypes = {
   initialActiveId: PropTypes.string,
   children: PropTypes.node.isRequired,
-  PanelWrapper: PropTypes.node.isRequired,
+  PanelWrapper: PropTypes.oneOfType([
+    PropTypes.elementType,
+    PropTypes.element,
+    PropTypes.node,
+  ]),
 }
 
 export default Accordion
