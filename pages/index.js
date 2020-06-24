@@ -1,14 +1,27 @@
 import * as React from 'react'
-import { Basic, Combined, Animated, bounce } from '../shared/styles'
+import { getCatalogue } from '../api/getCatalogue'
+import PropTypes from 'prop-types'
 
-const Home = () => (
-  <div>
-    <Basic>Cool Styles</Basic>
-    <Combined>
-      With <code>:hover</code>.
-    </Combined>
-    <Animated animation={bounce}>Lets bounce.</Animated>
-  </div>
-)
+import Catalogue from '../components/Catalogue/Catalogue'
+
+const Home = ({ catalogue }) => {
+  return (
+    <div>
+      <Catalogue catalogue={catalogue} />
+    </div>
+  )
+}
+
+Home.propTypes = {
+  catalogue: PropTypes.array,
+}
+
+export const getStaticProps = async () => {
+  const catalogue = await getCatalogue()
+
+  return {
+    props: { catalogue },
+  }
+}
 
 export default Home
