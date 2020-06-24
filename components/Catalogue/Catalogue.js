@@ -20,7 +20,7 @@ const Catalogue = ({ catalogue }) => {
 }
 
 Catalogue.propTypes = {
-  catalogue: PropTypes.array,
+  catalogue: PropTypes.object,
 }
 
 export default Catalogue
